@@ -2,12 +2,10 @@ $(document).ready(function(){
 // the above code makes it so the game starts after the html page is loaded
 // THIS IS WHERE I LIST ALL MY GLOBAL VARIABLES
 var c1, c2, c3, c4;
-// is it ok for vars with no values yet to be listed like this?
 var wins = 0;
 var losses = 0;
 var totalScore = 0;
-var numberGenerator = Math.floor(Math.random() * 102) + 19;
-console.log(numberGenerator);
+var numberGenerator;
 
 // THIS IS WHERE THE RANDOM NUMBERS ARE GENERATED FOR EACH CRYSTAL AND NUMBER GENERATOR
 
@@ -21,8 +19,6 @@ function crystalValue() {
 	c3 = Math.floor(Math.random() * 12) + 1;
 	c4 = Math.floor(Math.random() * 12) + 1;
 
-	// Need to figure out how to make crystal values show up on page
-	// ***add on.click function to assign values to crystals
 
 // THIS IS THE CODE THAT PRINTS TO PAGE
 	$("#numberWins").text(wins);
@@ -49,8 +45,6 @@ function score() {
 		console.log("win");
 		crystalValue();
 	}
-	
-	console.log("score function called")
 }
 
 // THIS ADDS CRYSTAL VALUES TOGETHER FOR TOTAL SCORE
@@ -73,6 +67,7 @@ $(".crystals").on("click", function() {
 	}
 
 	$("#totalScore").text(totalScore);
+	
 	score();
 });
 
