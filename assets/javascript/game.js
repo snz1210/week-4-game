@@ -47,10 +47,10 @@ function score() {
 	}
 }
 
-// THIS ADDS CRYSTAL VALUES TOGETHER FOR TOTAL SCORE
 crystalValue(); 
 // This makes the random number generator reset
 
+// THIS ADDS CRYSTAL VALUES TOGETHER FOR TOTAL SCORE
 $(".crystals").on("click", function() {
 	console.log($(this))
 	var clicked = $(this).attr("id");
@@ -67,7 +67,7 @@ $(".crystals").on("click", function() {
 	}
 
 	$("#totalScore").text(totalScore);
-	
+
 	score();
 });
 
